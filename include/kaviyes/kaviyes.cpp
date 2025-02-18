@@ -11,6 +11,29 @@
 
 namespace kstd {
 
+    char getch(bool Debug) { // https://stackoverflow.com/questions/7469139/what-is-the-equivalent-to-getch-getche-in-linux
+        struct termios oldt, newt;
+        char ch;
+
+        tcgetattr(STDIN_FILENO, &oldt);
+        newt = oldt;
+        newt.c_lflag &= ~(ICANON | ECHO);
+
+        tcsetattr(STDIN_FILENO, TCSANOW, &newt);
+
+        ch = getchar();
+
+        tcsetattr(STDIN_FILENO, TCSANOW, &oldt);
+
+        switch (Debug) {
+            case true:
+                std::cout << "[DEBUG] Key: " << ch << " is pressed\n" << std::endl;
+                return ch;
+            default:
+                return ch;
+        }
+    }
+
     void cter() {
         std::cout << "\033c";
     }

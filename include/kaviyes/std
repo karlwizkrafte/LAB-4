@@ -9,6 +9,8 @@
 */
 
 #include <base>
+#include <termios.h>
+#include <unistd.h>
 
 // Weights
 
@@ -24,6 +26,7 @@
 // #### Standard Kaviyes Library for C++
 namespace kstd {
 
+    char getch(bool Debug = false);
     void cter();
     
 }
