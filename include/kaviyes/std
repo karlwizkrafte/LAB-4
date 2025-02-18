@@ -1,0 +1,51 @@
+// [ WARNING ] This software is designed for Linux and may not be compatible with Windows NT platforms.
+
+
+/*
+   Author Karl Vince Reyes 2025
+   Educational Purposes Only
+
+   For Lab 4
+*/
+
+#include <base>
+#include <unistd.h>
+
+// Weights
+
+#define EXAM_1st             0.10 // exam 1st
+#define EXAM_2nd             0.10 // exam 2nd
+#define EXAM_3rd             0.10 // exam 3rd
+#define EXAM_FINAL           0.40 // final exam
+#define LAB_EXERCISE         0.15 // lab exercises
+#define QUIZZES              0.05 // quizzes
+#define PROGRAMMING_PLATES   0.05 // programming plates
+#define COMPRE_EXAM          0.05 // comprehensive exam
+
+// #### Standard Kaviyes Library for C++
+namespace kstd {
+
+    void cter();
+    
+}
+
+// For Lab 4 - Author Karl Vince Reyes
+namespace kgrade {
+
+    double computeBase_15(double RawScore, double TotalItems);
+    std::string getRemarks(double grade);
+    double getPoints(std::string x, bool StopOnError = true);
+
+    double getAverage(
+
+        double firstExam,
+        double secondExam,
+        double thirdxam,
+        double finalExam,
+
+        double labExercises,
+        double quizzes,
+        double programmingPlates,
+        double CompreExam
+    );
+}
