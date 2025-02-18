@@ -43,13 +43,12 @@ int main(int, char**){
              << "Press <any key> to exit" << endl
         << endl;
 
-        int key = cin.get();
+        char keyPress = kstd::getch(true);
 
-        if (key != 10) {
+        if (keyPress != '\n') {
             break;
         }
     }
 
-    cout << endl;
     return 0;
 }
