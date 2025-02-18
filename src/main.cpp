@@ -28,7 +28,8 @@ int main(int, char**){
         g = kgrade::getPoints("Quizzes/Ass/Oral Recitation : ");
         h = kgrade::getPoints("Programming Plates          : ");
         
-        avg = kgrade::getAverage(a,b,c,d,e,f,g,h);
+        avg = static_cast<int>(kgrade::getAverage(a,b,c,d,e,f,g,h));
+
         rmk = kgrade::getRemarks(avg);
     
         cout << endl << endl
