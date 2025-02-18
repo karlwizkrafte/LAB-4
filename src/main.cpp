@@ -22,7 +22,9 @@ int main(int, char**){
         b = kgrade::getPoints("       Second: ");
         c = kgrade::getPoints("       Third : ");
         d = kgrade::getPoints("       Final : ");
-    
+        
+        cout << endl;
+
         e = kgrade::getPoints("Comprehensive Exam          : ");
         f = kgrade::getPoints("Laboratory Exercises        : ");
         g = kgrade::getPoints("Quizzes/Ass/Oral Recitation : ");
@@ -33,7 +35,7 @@ int main(int, char**){
         rmk = kgrade::getRemarks(avg);
     
         cout << endl << endl
-             << "Gen. Av.   : " << fixed << setprecision(0) << avg << endl
+             << "Gen. Av.   : " << avg << endl
              << "Remarks    : " << rmk << endl
         <<endl;
 
