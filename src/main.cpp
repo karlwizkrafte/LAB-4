@@ -43,7 +43,7 @@ int main(int, char**){
              << "Press <any key> to exit" << endl
         << endl;
 
-        char keyPress = kstd::getch(true);
+        char keyPress = kstd::getch();
 
         if (keyPress != '\n') {
             break;
