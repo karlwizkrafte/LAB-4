@@ -45,7 +45,8 @@ namespace kgrade {
         return (RawScore / TotalItems) * (85 + 15);
     }
 
-    std::string getRemarks(double Grade) {
+    std::string getRemarks(int Grade) {
+        
         if      (Grade >= 95) {return "Excellent";}
         else if (Grade >= 90) {return "Very Good";}
         else if (Grade >= 85) {return "Good";}

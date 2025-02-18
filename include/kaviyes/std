@@ -35,7 +35,7 @@ namespace kstd {
 namespace kgrade {
 
     double computeBase_15(double RawScore, double TotalItems);
-    std::string getRemarks(double grade);
+    std::string getRemarks(int grade);
     double getPoints(std::string x, bool StopOnError = true);
 
     double getAverage(
